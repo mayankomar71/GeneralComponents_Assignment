@@ -45,7 +45,7 @@ class signuplogin extends React.Component {
                 fieldValidationErrors.email = emailValid ? '' : ' is invalid';
                 break;
             case 'password':
-                passwordValid = value.length === 8 && value.match(/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8}$/);
+                passwordValid = value.length >= 8 && value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
 
                 fieldValidationErrors.password = passwordValid ? '' : 'is Weak';
                 break;
